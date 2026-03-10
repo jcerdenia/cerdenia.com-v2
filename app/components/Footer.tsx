@@ -14,7 +14,7 @@ export default function Footer() {
         <a
           href="mailto:joshua@cerdenia.com"
           aria-label="Email"
-          className="no-underline text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-zinc-100"
+          className="no-underline text-zinc-400 transition-colors hover:text-zinc-900"
         >
           <FaEnvelope size={16} />
         </a>

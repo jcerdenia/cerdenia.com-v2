@@ -5,7 +5,7 @@ export default function BackLink() {
   return (
     <Link
       href="/"
-      className="no-underline mb-12 inline-flex items-center gap-2 text-sm uppercase tracking-widest text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+      className="no-underline mb-12 inline-flex items-center gap-2 text-sm uppercase tracking-widest text-zinc-400 hover:text-zinc-900"
     >
       <FaCaretLeft size={12} />
       Josh Cerdenia

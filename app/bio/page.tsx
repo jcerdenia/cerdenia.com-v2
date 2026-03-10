@@ -11,11 +11,11 @@ export default function Bio() {
   );
 
   return (
-    <main className="flex min-h-screen flex-col bg-white font-sans dark:bg-black">
+    <main className="flex min-h-screen flex-col bg-white font-sans">
       <div className="mx-auto w-full max-w-4xl flex-1 px-6 py-12 sm:px-16 sm:py-20">
         <BackLink />
 
-        <h1 className="mb-10 text-3xl font-semibold tracking-tight text-black sm:text-4xl dark:text-white">
+        <h1 className="mb-10 text-3xl font-semibold tracking-tight sm:text-4xl">
           Biography
         </h1>
 
@@ -29,7 +29,7 @@ export default function Bio() {
           </a>
         </div>
 
-        <div className="max-w-2xl text-zinc-800 dark:text-zinc-200">
+        <div className="max-w-2xl">
           <ReactMarkdown
             components={{
               p: ({ children }) => (
