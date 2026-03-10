@@ -1,19 +1,19 @@
 import Image from "next/image";
-import { FaEnvelope } from "react-icons/fa";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white font-sans dark:bg-black">
-      <div className="mx-auto max-w-4xl px-8 py-20 sm:px-16">
+    <main className="flex min-h-screen flex-col bg-white font-sans dark:bg-black">
+      <div className="mx-auto w-full max-w-4xl flex-1 px-6 py-12 sm:px-16 sm:py-20">
         {/* Name + title */}
-        <div className="mb-10">
-          <h1 className="text-4xl font-semibold tracking-tight text-black dark:text-white">
+        <div className="mb-8 sm:mb-10">
+          <h1 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl dark:text-white">
             Josh Cerdenia
           </h1>
         </div>
 
         {/* Photo */}
-        <div className="mb-10">
+        <div className="mb-8 sm:mb-10">
           <Image
             src="/tfo.jpeg"
             alt="Josh Cerdenia"
@@ -28,7 +28,7 @@ export default function Home() {
         </div>
 
         {/* Pull quote */}
-        <blockquote className="mb-16 border-l-2 border-zinc-200 pl-6 text-lg leading-8 text-zinc-600 dark:border-zinc-700 dark:text-zinc-400">
+        <blockquote className="mb-12 border-l-2 border-zinc-200 pl-5 text-base leading-8 text-zinc-800 sm:mb-16 sm:pl-6 sm:text-lg dark:border-zinc-700 dark:text-zinc-200">
           Cerdenia&apos;s{" "}
           <a
             href="https://www.youtube.com/watch?v=xnmJFpS1x34"
@@ -54,37 +54,29 @@ export default function Home() {
         </blockquote>
 
         {/* Nav */}
-        <nav className="flex gap-4">
+        <nav className="flex flex-wrap gap-3 sm:gap-4">
           <a
             href="/bio"
-            className="no-underline flex h-11 items-center border border-zinc-900 px-6 text-sm font-medium tracking-wide transition-colors hover:bg-zinc-900 hover:text-white dark:border-zinc-200 dark:text-zinc-200 dark:hover:bg-zinc-200 dark:hover:text-black"
+            className="no-underline flex h-10 items-center border border-zinc-900 px-5 text-sm font-medium tracking-wide transition-colors hover:bg-zinc-900 hover:text-white sm:h-11 sm:px-6 dark:border-zinc-200 dark:text-zinc-200 dark:hover:bg-zinc-200 dark:hover:text-black"
           >
             Biography
           </a>
           <a
             href="/compositions"
-            className="no-underline flex h-11 items-center border border-zinc-900 px-6 text-sm font-medium tracking-wide transition-colors hover:bg-zinc-900 hover:text-white dark:border-zinc-200 dark:text-zinc-200 dark:hover:bg-zinc-200 dark:hover:text-black"
+            className="no-underline flex h-10 items-center border border-zinc-900 px-5 text-sm font-medium tracking-wide transition-colors hover:bg-zinc-900 hover:text-white sm:h-11 sm:px-6 dark:border-zinc-200 dark:text-zinc-200 dark:hover:bg-zinc-200 dark:hover:text-black"
           >
             Compositions
+          </a>
+          <a
+            href="/contact"
+            className="no-underline flex h-10 items-center border border-zinc-900 px-5 text-sm font-medium tracking-wide transition-colors hover:bg-zinc-900 hover:text-white sm:h-11 sm:px-6 dark:border-zinc-200 dark:text-zinc-200 dark:hover:bg-zinc-200 dark:hover:text-black"
+          >
+            Contact
           </a>
         </nav>
       </div>
 
-      {/* Footer */}
-      <footer className="mx-auto max-w-4xl px-8 pb-10 sm:px-16">
-        <div className="flex items-center justify-between pt-6">
-          <p className="text-sm text-zinc-400">
-            &copy; {new Date().getFullYear()} <a href="https://cerdenia.com">cerdenia.com</a>
-          </p>
-          <a
-            href="mailto:joshua@cerdenia.com"
-            aria-label="Email"
-            className="no-underline text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-zinc-100"
-          >
-            <FaEnvelope size={18} />
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
