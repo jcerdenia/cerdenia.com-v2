@@ -40,9 +40,7 @@ export default async function WorkPage({
           {!work.instrumentation && <p>{work.year}</p>}
         </div>
 
-        {!work.content && (
-          <p className="italic">Coming soon.</p>
-        )}
+        {!work.content && <p>Coming soon.</p>}
 
         {work.content && (
           <div className="prose max-w-2xl">
