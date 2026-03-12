@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Footer from "./components/Footer";
+import NavLinks from "./components/NavLinks";
 import Link from "next/link";
 
 export default function Home() {
@@ -48,27 +49,7 @@ export default function Home() {
           </cite>
         </blockquote>
 
-        {/* Nav */}
-        <nav className="flex flex-wrap gap-3 sm:gap-4">
-          <a
-            href="/bio"
-            className="no-underline flex h-10 items-center border border-zinc-900 px-5 text-sm font-medium tracking-wide transition-colors hover:bg-zinc-900 hover:text-white sm:h-11 sm:px-6"
-          >
-            Biography
-          </a>
-          <a
-            href="/compositions"
-            className="no-underline flex h-10 items-center border border-zinc-900 px-5 text-sm font-medium tracking-wide transition-colors hover:bg-zinc-900 hover:text-white sm:h-11 sm:px-6"
-          >
-            Compositions
-          </a>
-          <a
-            href="/contact"
-            className="no-underline flex h-10 items-center border border-zinc-900 px-5 text-sm font-medium tracking-wide transition-colors hover:bg-zinc-900 hover:text-white sm:h-11 sm:px-6"
-          >
-            Contact
-          </a>
-        </nav>
+        <NavLinks />
       </div>
 
       <Footer />
