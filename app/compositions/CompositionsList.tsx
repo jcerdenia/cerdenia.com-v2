@@ -58,9 +58,13 @@ export default function CompositionsList({ works }: { works: Work[] }) {
               {items.map((work) => (
                 <li key={work.key} className="flex items-baseline justify-between gap-4 py-3">
                   <div>
-                    <Link href={`/compositions/${work.key}`} className="font-medium hover:underline">
-                      {work.title}
-                    </Link>
+                    {work.detail !== false ? (
+                      <Link href={`/compositions/${work.key}`} className="font-medium hover:underline">
+                        {work.title}
+                      </Link>
+                    ) : (
+                      <span className="font-medium">{work.title}</span>
+                    )}
                     {work.subtitle && (
                       <span>{` (${work.subtitle})`}</span>
                     )}

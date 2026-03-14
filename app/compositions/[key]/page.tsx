@@ -1,17 +1,14 @@
-import fs from "fs";
-import path from "path";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import BackLink from "../../components/BackLink";
 import Footer from "../../components/Footer";
-import { Work } from "../types";
+import { getAllCompositions, getComposition } from "../../../lib/compositions";
 
 export async function generateStaticParams() {
-  const works: Work[] = JSON.parse(
-    fs.readFileSync(path.join(process.cwd(), "content/works.json"), "utf8")
-  );
-  return works.map((w) => ({ key: w.key }));
+  return getAllCompositions()
+    .filter((w) => !w.hidden && w.detail !== false)
+    .map((w) => ({ key: w.key }));
 }
 
 export default async function WorkPage({
@@ -20,11 +17,8 @@ export default async function WorkPage({
   params: Promise<{ key: string }>;
 }) {
   const { key } = await params;
-  const works: Work[] = JSON.parse(
-    fs.readFileSync(path.join(process.cwd(), "content/works.json"), "utf8")
-  );
-  const work = works.find((w) => w.key === key);
-  if (!work || work.hidden) notFound();
+  const work = getComposition(key);
+  if (!work || work.hidden || work.detail === false) notFound();
 
   return (
     <main className="flex min-h-screen flex-col bg-white font-sans">
@@ -71,6 +65,13 @@ export default async function WorkPage({
             </ReactMarkdown>
           </div>
         )}
+
+        <a
+          href="mailto:joshua@cerdenia.com"
+          className="no-underline mt-10 inline-flex h-10 items-center border border-zinc-900 px-5 text-sm font-medium tracking-wide transition-colors hover:bg-zinc-900 hover:text-white sm:h-11 sm:px-6"
+        >
+          Contact to Perform
+        </a>
       </div>
       <Footer />
     </main>

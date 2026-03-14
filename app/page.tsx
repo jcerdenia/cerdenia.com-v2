@@ -32,9 +32,9 @@ export default function Home() {
         {/* Pull quote */}
         <blockquote className="mb-12 border-l-2 border-zinc-200 pl-5 text-base leading-8 sm:mb-16 sm:pl-6 sm:text-lg">
           Cerdenia&apos;s{" "}
-          <a href="https://www.youtube.com/watch?v=xnmJFpS1x34">
+          <Link href="/compositions/feuertrunken">
             <em>Feuertrunken</em>
-          </a>{" "}
+          </Link>{" "}
           … is filled with urgency, intensity, energy, excitement and a flurry of
           sounds both soft and otherwise, percussive and brass pronouncements,
           and endless rhythms … a piece of enormous power that moves from one

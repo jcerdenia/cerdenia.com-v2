@@ -9,4 +9,5 @@ export interface Work {
   scoreUrl?: string;
   content?: string;
   hidden?: boolean;
+  detail?: boolean;
 }

@@ -1,13 +1,10 @@
-import fs from "fs";
-import path from "path";
 import BackLink from "../components/BackLink";
 import Footer from "../components/Footer";
 import CompositionsList from "./CompositionsList";
+import { getAllCompositions } from "../../lib/compositions";
 
 export default function Compositions() {
-  const works = JSON.parse(
-    fs.readFileSync(path.join(process.cwd(), "content/works.json"), "utf8")
-  );
+  const works = getAllCompositions();
 
   return (
     <main className="flex min-h-screen flex-col bg-white font-sans">
