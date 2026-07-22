@@ -10,7 +10,7 @@ export default function Home() {
         {/* Name + title */}
         <div className="mb-8 sm:mb-10">
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-            <Link href="/" className="no-underline">Josh Cerdenia</Link>
+            <Link href="/" className="no-underline">Joshua Cerdenia</Link>
           </h1>
         </div>
 
@@ -18,7 +18,7 @@ export default function Home() {
         <div className="mb-8 sm:mb-10">
           <Image
             src="/tfo.jpeg"
-            alt="Josh Cerdenia"
+            alt="Joshua Cerdenia"
             width={800}
             height={500}
             className="w-full object-cover"

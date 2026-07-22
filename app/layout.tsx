@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Josh Cerdenia",
+  title: "Joshua Cerdenia",
   description: "Composer",
 };
 

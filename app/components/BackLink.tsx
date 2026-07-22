@@ -3,7 +3,7 @@ import { FaCaretLeft } from "react-icons/fa";
 
 export default function BackLink({
   href = "/",
-  label = "Josh Cerdenia",
+  label = "Joshua Cerdenia",
 }: {
   href?: string;
   label?: string;
